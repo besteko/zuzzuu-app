@@ -1,4 +1,4 @@
-const API_URL = "https://zuzzuu-api.onrender.com/"; // Render.com'daki API URL'nizi buraya ekleyin
+const API_URL = "https://zuzzuu-api.onrender.com"; // Render.com'daki API URL'nizi buraya ekleyin
 
 export const fetchUserPoints = async (username = "Ahmet Özdemir") => {
   try {
