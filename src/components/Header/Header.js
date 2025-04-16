@@ -9,9 +9,9 @@ function Header() {
       </div>
       <nav className="nav-menu">
         <ul>
-          <li><a href="#" className="nav-link">ANASAYFA</a></li>
-          <li><a href="#" className="nav-link">GÖREVLER</a></li>
-          <li><a href="#" className="nav-link">ÖDÜL MERKEZİ</a></li>
+          <li><a href="/#" className="nav-link">ANASAYFA</a></li>
+          <li><a href="/#" className="nav-link">GÖREVLER</a></li>
+          <li><a href="/#" className="nav-link">ÖDÜL MERKEZİ</a></li>
         </ul>
       </nav>
       <button className="profile-button">PROFİLİM</button>
