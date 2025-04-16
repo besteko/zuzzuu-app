@@ -1,0 +1,79 @@
+/* src/components/Header/Header.css */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    height: 80px;
+    margin-left: 3rem;
+  }
+  
+  .zuzzuu-logo {
+    margin-left: 5rm;
+  }
+  
+  .nav-menu {
+    position: relative;
+    margin-right: 1rem;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 3.0rem;
+    height: 10px;
+    margin-left: 45rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #5A5A5A;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+  
+  .profile-button {
+    background: linear-gradient(113.47deg, #29D7FF 18.07%, #3CBFFF 27.42%, #7083FF 46.12%, #C123FF 73.51%, #E000FF 83.53%);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 0.6rem 1.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0px 10px 5px rgba(224, 1, 255, 0.1);
+    margin-right: 4rem;
+  }
+  
+  .profile-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 2px 0px 15px 7px rgba(224, 1, 255, 0.15);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header {
+      height: auto;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .profile-button {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.8rem;
+    }
+  }

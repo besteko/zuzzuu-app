@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import UserPointsSection from './components/UserPoints/UserPointsSection';
+import TasksSection from './components/Tasks/TasksSection';
+import RewardsSection from './components/Rewards/RewardsSection';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <main className="main-content">
+        <UserPointsSection />
+        <TasksSection />
+        <RewardsSection />
+      </main>
     </div>
   );
 }
