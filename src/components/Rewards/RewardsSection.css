@@ -1,56 +1,89 @@
 /* src/components/Rewards/RewardsSection.css */
 .rewards-section {
-    margin: 2rem 0;
-    margin-left: 4rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 24.5px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #5A5A5A;
+}
+
+.view-all-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .rewards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
-  
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .rewards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
-  
+}
+
+@media (max-width: 768px) {
   .section-title {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 500;
-    font-size: 24.5px;
-    line-height: 100%;
-    letter-spacing: 0px;
-    color: #5A5A5A;
+    font-size: 22px;
   }
   
   .view-all-button {
-    background: none;
-    border: none;
-    color: #666;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-right: 5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .rewards-section {
+    margin: 1.5rem auto;
   }
   
   .rewards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
   }
   
-  /* Responsive styles */
-  @media (max-width: 1200px) {
-    .rewards-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  .section-title {
+    font-size: 20px;
   }
   
-  @media (max-width: 992px) {
-    .rewards-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .view-all-button {
+    font-size: 0.8rem;
   }
-  
-  @media (max-width: 576px) {
-    .rewards-grid {
-      grid-template-columns: 1fr;
-    }
+}
+
+@media (max-width: 400px) {
+  .rewards-grid {
+    grid-template-columns: 1fr;
   }
+}

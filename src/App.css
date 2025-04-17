@@ -6,14 +6,17 @@
   font-family: 'Outfit', sans-serif;
 }
 
-body {
+html, body {
+  overflow-x: hidden;
+  width: 100%;
   background-color: #fff;
 }
 
 .app {
-  max-width: 2100px;
+  max-width: 2200px;
   margin: 0 auto;
-  padding: 0.2rem;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 .main-content {
@@ -21,8 +24,14 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 1200px) {
+@media (max-width: 2200px) {
   .app {
-    padding: 0 1.5rem;
+    padding: 0 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .app {
+    padding: 0 0.5rem;
   }
 }

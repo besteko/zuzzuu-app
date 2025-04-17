@@ -1,172 +1,174 @@
 /* src/components/UserPoints/UserPointsSection.css */
 .points-section {
-    position: relative;
-    width: 100%;
-    padding: 2rem 0 3rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-  }
-  
-  .coins-background {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    background-image: url('../../assets/background-coins.svg'); 
-    background-size: cover;
-    background-position: center;
-    opacity: 1.0;
-    z-index: -1;
-  }
-  
-  .points-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .points-title {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 100%;
-    letter-spacing: -0.6px;
-    text-align: center;
-    color: #263238;
-    margin-bottom: 1.3rem;
-    margin-top: 2rem;
-    align-self: center;
-    width: auto;
-  }
-  
-  .points-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-    align-self: center;
-    width: auto;
-  }
-  
-  .coin-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .coin-icon img {
-    width: 200px;
-    height: 200px;
-    margin-right: 1rem;
+  position: relative;
+  width: 100%;
+  padding: 2rem 0 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: transparent; /* Added to ensure background is visible */
+}
+
+.coins-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/background-coins.svg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 0; /* Changed from -1 to 0 */
+  pointer-events: none; /* Added to allow clicking through the background */
+}
+
+.points-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.points-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #263238;
+  margin-bottom: 1.3rem;
+  margin-top: 2rem;
+  align-self: center;
+  width: auto;
+}
+
+.points-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  align-self: center;
+  width: auto;
+}
+
+.coin-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-icon img {
+  width: 200px;
+  height: 200px;
+  margin-right: 1rem;
+}
+
+.xp-amount {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #263238;
+  line-height: 2.5;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  padding: 0.6rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  align-self: flex-start;
+  margin-left: 2rem;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 100%;
+  letter-spacing: -0.36px;
+  color: #263238;
+}
+
+.user-level-container {
+  display: flex;
+  align-items: center;
+}
+
+.level-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.user-level {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .points-section {
+    padding: 1.5rem 0 2.5rem;
   }
   
   .xp-amount {
-    font-size: 4.5rem;
-    font-weight: bold;
-    color: #263238;
-    line-height: 2.5;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .xp-amount {
+    font-size: 2.5rem;
+  }
+  
+  .points-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .coin-icon img {
+    width: 60px;
+    height: 60px;
   }
   
   .user-profile {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 30px;
-    padding: 0.6rem 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    align-self: flex-start;
-    margin-left: 2rem;
+    padding: 0.4rem 0.8rem;
   }
   
   .user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 0.8rem;
-  }
-  
-  .user-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 30px;
+    height: 30px;
   }
   
   .user-name {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 100%;
-    letter-spacing: -0.36px;
-    color: #263238;
-  }
-  
-  .user-level-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .level-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-  }
-  
-  .user-level {
-    color: #888;
     font-size: 0.9rem;
   }
   
-  /* Responsive styles */
-  @media (max-width: 992px) {
-    .points-section {
-      padding: 1.5rem 0 2.5rem;
-    }
-    
-    .xp-amount {
-      font-size: 3rem;
-    }
+  .user-level {
+    font-size: 0.8rem;
   }
-  
-  @media (max-width: 768px) {
-    .xp-amount {
-      font-size: 2.5rem;
-    }
-    
-    .points-title {
-      font-size: 1.4rem;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .coin-icon img {
-      width: 60px;
-      height: 60px;
-    }
-    
-    .user-profile {
-      padding: 0.4rem 0.8rem;
-    }
-    
-    .user-avatar {
-      width: 30px;
-      height: 30px;
-    }
-    
-    .user-name {
-      font-size: 0.9rem;
-    }
-    
-    .user-level {
-      font-size: 0.8rem;
-    }
-  }
+}

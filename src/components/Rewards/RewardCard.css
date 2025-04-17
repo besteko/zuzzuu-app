@@ -1,74 +1,105 @@
 /* src/components/Rewards/RewardCard.css */
 .reward-card {
-    width: 287px;
-    height: 227.5px;
-    border-radius: 31.5px;
-    border: 1.75px solid #EDEDED;
-    background-color: #EDEDED;
-    box-shadow: 0px 8.75px 43.75px 0px rgba(0, 0, 0, 0.05),
-                0px 8.75px 43.75px 0px #0000000D;
-    filter: drop-shadow(0px 8.75px 43.75px rgba(0, 0, 0, 0.05));
-    overflow: hidden;
-    padding: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .reward-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8.75px 43.75px 0px rgba(0, 0, 0, 0.08),
-                0px 8.75px 43.75px 0px #0000000D;
+  width: 100%;
+  max-width: 287px;
+  height: auto;
+  min-height: 227.5px;
+  border-radius: 31.5px;
+  border: 1.75px solid #EDEDED;
+  background-color: #EDEDED;
+  box-shadow: 0px 8.75px 43.75px 0px rgba(0, 0, 0, 0.05),
+              0px 8.75px 43.75px 0px #0000000D;
+  filter: drop-shadow(0px 8.75px 43.75px rgba(0, 0, 0, 0.05));
+  overflow: hidden;
+  padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.reward-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8.75px 43.75px 0px rgba(0, 0, 0, 0.08),
+              0px 8.75px 43.75px 0px #0000000D;
+}
+
+.reward-image-container {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.reward-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reward-info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 100%;
+  letter-spacing: -0.7px;
+}
+
+.reward-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 17.5px;
+  line-height: 100%;
+  letter-spacing: -0.7px;
+  color: #5A5A5A;
+  margin-bottom: 0.5rem;
+}
+
+.reward-points {
+  display: flex;
+  align-items: center;
+  color: #5A5A5A;
+  font-family: 'Outfit', sans-serif;
+  font-weight: bold;
+  font-size: 17.5px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+.reward-coin {
+  width: 42px;
+  height: 42px;
+  margin-right: 0.9rem;
+}
+
+@media (max-width: 350px) {
+  .reward-card {
+    max-width: 100%;
   }
   
   .reward-image-container {
-    height: 150px;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .reward-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 130px;
   }
   
   .reward-info {
-    padding: 1rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 100%;
-    letter-spacing: -0.7px;
+    padding: 0.8rem;
   }
   
   .reward-title {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 500;
-    font-size: 17.5px;
-    line-height: 100%;
-    letter-spacing: -0.7px;
-    color: #5A5A5A;
-    margin-bottom: 0.5rem;
+    font-size: 16px;
   }
   
   .reward-points {
-    display: flex;
-    align-items: center;
-    color: #5A5A5A;
-    font-family: 'Outfit', sans-serif;
-    font-weight: bold;
-    font-size: 17.5px;
-    line-height: 100%;
-    letter-spacing: 0px;
+    font-size: 16px;
   }
   
   .reward-coin {
-    width: 42px;
-    height: 42px;
-    margin-right: 0.9rem;
+    width: 36px;
+    height: 36px;
+    margin-right: 0.7rem;
   }
+}

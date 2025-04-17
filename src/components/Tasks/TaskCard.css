@@ -1,7 +1,9 @@
 /* src/components/Tasks/TaskCard.css */
 .task-card {
-    width: 287px;
-    height: 227.5px;
+    width: 100%;
+    max-width: 287px;
+    height: auto;
+    min-height: 227.5px;
     border-radius: 31.5px;
     border: 1.75px solid #EDEDED;
     background-color: #EDEDED;
@@ -11,52 +13,68 @@
     overflow: hidden;
     padding: 2.9rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .task-card:hover{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.task-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8.75px 43.75px 0px rgba(0, 0, 0, 0.08),
                 0px 8.75px 43.75px 0px #0000000D;
-  }
-  
-  .task-coin {
+}
+
+.task-coin {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-  }
-  
-  .task-coin img {
-    width: 40px;
-    height: 40px;
-    margin-right: 0.5rem;
-  }
-  
-  .task-points {
-    font-weight: bold;
-    color: #5A5A5A;
-    font-size: 1rem;
-  }
-  
-  .task-title {
-    margin-bottom: 1rem;
+}
+
+.task-coin img {
+    width: 42px;
+    height: 42px;
+    margin-right: 0.9rem;
+}
+
+.task-info {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.task-title {
     font-family: 'Outfit', sans-serif;
     font-weight: 500;
-    font-size: 21px;
+    font-size: 17.5px;
     line-height: 100%;
     letter-spacing: -0.7px;
     color: #5A5A5A;
-  }
-  
-  /* Progress Bar styles */
-  .progress-container {
+    margin-bottom: 0.5rem;
+}
+
+.task-points {
+    display: flex;
+    align-items: center;
+    color: #5A5A5A;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    font-size: 17.5px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+/* Progress Bar styles */
+.progress-container {
     position: relative;
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
-  }
-  
-  .progress-bar-wrapper {
+}
+
+.progress-bar-wrapper {
     width: 210px;
     height: 14px;
     background: #FFFFFF;
@@ -64,19 +82,43 @@
     border-radius: 10.5px;
     box-shadow: 0px 3.88px 11.63px 0px #00000040;
     overflow: hidden;
-  }
-  
-  .progress-bar {
+}
+
+.progress-bar {
     height: 100%;
     background-color: #3CBFFF;
     border-radius: 10.5px;
-  }
-  
-  .task-progress-text {
+}
+
+.task-progress-text {
     color: #5A5A5A;
     font-size: 0.9rem;
     font-weight: bold;
     white-space: nowrap;
     position: absolute;
-    margin-left: 13rem;
-  }
+    margin-left: 12.5rem;
+}
+
+@media (max-width: 350px) {
+    .task-card {
+        max-width: 100%;
+    }
+    
+    .task-info {
+        padding: 0.8rem;
+    }
+    
+    .task-title {
+        font-size: 16px;
+    }
+    
+    .task-points {
+        font-size: 16px;
+    }
+    
+    .task-coin img {
+        width: 36px;
+        height: 36px;
+        margin-right: 0.7rem;
+    }
+}
